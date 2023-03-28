@@ -15,7 +15,7 @@ defineProps({
         <h1 class="header">DiaChanka</h1>
 
         <div class="wrapper">
-            <RouterLink to="/">Главная</RouterLink>
+          <!-- <RouterLink to="/">Главная</RouterLink> -->
         </div>
     </header>
 </template>

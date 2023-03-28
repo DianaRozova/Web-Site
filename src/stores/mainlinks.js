@@ -1,11 +1,7 @@
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
+import data from './listOfLinks.json' assert { type: 'JSON' };
 
 export const listOfLinks = defineStore('links', () => {
-  const list = [
-    {displayName: 'Instagram', link: 'https://www.instagram.com/rozova_diana1999/'},
-    {displayName: 'VK', link: 'https://vk.com/dianka.rozova'}
-  ]
-
+  let list = data.array;
   return { list }
 })
