@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+// import { RouterLink } from 'vue-router'
 
 defineProps({
   msg: {
@@ -28,6 +28,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.2);
 
   .header {
     margin: auto 10px;
