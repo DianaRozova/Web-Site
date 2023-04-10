@@ -1,9 +1,7 @@
-{
-    "array": [
-        {"displayName": "Instagram", "link": "https://www.instagram.com/rozova_diana1999/"},
-        {"displayName": "ВКонтакте", "link": "https://vk.com/dianka.rozova"},
-        {"displayName": "Rankone", "link": "https://www.rankone.global/diachanka"},
-        {"displayName": "Youtube", "link": "https://www.youtube.com/channel/UCZ2RV9SvqoqhRiBZrnP2jLw/featured"},
-        {"displayName": "GoodGame", "link": "https://goodgame.ru/channel/DiaChanka/"}
-      ]
-}
+[
+  ["Instagram", "https://www.instagram.com/rozova_diana1999/"],
+  ["ВКонтакте", "https://vk.com/dianka.rozova"],
+  ["Rankone", "https://www.rankone.global/diachanka"],
+  ["Youtube", "https://www.youtube.com/channel/UCZ2RV9SvqoqhRiBZrnP2jLw/featured"],
+  ["GoodGame", "https://goodgame.ru/channel/DiaChanka/"]
+]

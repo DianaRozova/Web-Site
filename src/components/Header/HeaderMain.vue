@@ -1,18 +1,24 @@
-<script setup>
+<script>
 import { RouterLink } from 'vue-router'
+// import MainMenu from './MainMenu/MainMenu.vue';
 
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
+export default {
+  name: "HeaderMain",
+  components: {
+    // MainMenu
+  },
+  data: () => {
+    return {};
+  },
+}
 </script>
 
 <template>
     <header>
         <!-- <div alt="Vue logo" class="logo"></div> -->
         <h1 class="header">DiaChanka</h1>
+
+        <!-- <MainMenu/> -->
 
         <div class="wrapper">
           <!-- <RouterLink to="/">Главная</RouterLink> -->
@@ -28,13 +34,14 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.2);
 
   .header {
     margin: auto 10px;
     font-family: 'Arial Black';
-    color: #003A69;
+    color: var(--base-text-colour);
     font-weight: bold;
-    font-size: 24px;
+    font-size: var(--base-h1-font-size);
   }
 
   .wrapper {
