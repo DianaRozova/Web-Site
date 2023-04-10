@@ -1,24 +1,32 @@
-<script setup>
-import { listOfLinks } from '@/stores/mainlinks';
-
-const { list } = listOfLinks();
-</script>
-
 <template>
-  <main>
     <div class="about">
       <!-- <h1>Ссылки на страницы стримака</h1> -->
       <div class="list-links">
         <ul>
-          <li v-for="(item, index) in list" :key="index">
+          <li v-for="item in links" :key="item.link_key">
             <a :href="item.link" target="_blank">{{ item.displayName }}</a>
           </li>
         </ul>
       </div>
       <div id="insta" class="elfsight-app-42cbd326-b041-4430-b8d0-31f24756fbb7"></div>
     </div>
-  </main>
 </template>
+
+<script>
+import { listOfLinks } from '@/stores/mainlinks';
+
+export default {
+  name: 'HomeView',
+  data:() => {
+    return {links: []}
+  },
+  async mounted() {
+    const linkStore = listOfLinks();
+    let { list } = await linkStore.listLinks;
+    this.links = list;
+  }
+}
+</script>
 
 <style scoped lang="scss">
 .about {
