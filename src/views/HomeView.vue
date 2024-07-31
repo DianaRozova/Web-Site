@@ -2,27 +2,37 @@
     <div class="about">
       <!-- <h1>Ссылки на страницы стримака</h1> -->
       <div class="list-links">
-        <ul>
+        <ul v-if="!loading" >
           <li v-for="item in links" :key="item.link_key">
             <a :href="item[1]" target="_blank">{{ item[0] }}</a>
           </li>
         </ul>
+        <SpinnerIcon v-else />
       </div>
     </div>
 </template>
 
 <script>
 import { listOfLinks } from '@/stores/mainlinks';
+import SpinnerIcon from "../components/icons/SpinnerIcon.vue";
 
 export default {
   name: 'HomeView',
+  components: {
+    SpinnerIcon
+  },
   data:() => {
-    return {links: []}
+    return {
+      links: [],
+      loading: true,
+    }
   },
   async mounted() {
+    this.loading = true;
     const linkStore = listOfLinks();
     let { list } = await linkStore.listLinks;
     this.links = list;
+    this.loading = false;
   }
 }
 </script>
